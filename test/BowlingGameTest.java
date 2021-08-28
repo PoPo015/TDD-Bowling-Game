@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,7 +15,12 @@ class BowlingGameTest {
 
     @Test
     public void canRoll(){
+
         game.roll(0);
+
+        for(int i=0; i<20; i++) game.roll(0);
+
+        assertEquals(0,game.getscore());
     }
 
 
