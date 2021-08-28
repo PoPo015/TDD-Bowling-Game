@@ -1,8 +1,12 @@
 public class Game {
 
-    public void roll(int inps) {}
+    int inps;
+
+    public void roll(int inps) {
+        this.inps += inps;
+    }
 
     public int getscore() {
-        return -1;
+        return inps;
     }
 }
