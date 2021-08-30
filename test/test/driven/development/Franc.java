@@ -1,8 +1,8 @@
 package test.driven.development;
 
-public class Franc {
+public class Franc extends Money {
 
-    public int amount;
+//    public int amount;
 
     public Franc(int amount){
         this.amount = amount;
@@ -12,12 +12,10 @@ public class Franc {
         return new Franc(amount * multiplier);
     }
 
-    public boolean equals(Object object){
-        Franc franc = (Franc) object;
-        return amount == franc.amount;
-
-
-    }
+//    public boolean equals(Object object){
+//        Franc franc = (Franc) object;
+//        return amount == franc.amount;
+//    }
 
 
 

@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class money {
+public class moneyTDD {
 
 
     @Test
@@ -22,16 +22,18 @@ public class money {
     public void testEquality() {
         assertTrue(new Dollar(5).equals(new Dollar(5)));
         assertFalse(new Dollar(5).equals(new Dollar(6)));
+
+        assertTrue(new Franc(5).equals(new Franc(5)));
+        assertFalse(new Franc(5).equals(new Franc(6)));
+
     }
 
     @Test
     @DisplayName("5장 $5 + 10CHF = $10(환율이 2:1일경우)")
-    public void testFrancMultiplication(){
+    public void testFrancMultiplication() {
         Franc five = new Franc(5);
-
-        assertEquals(new Franc(10),five.time(2));
-        assertEquals(new Franc(15),five.time(3));
-
+        assertEquals(new Franc(10), five.time(2));
+        assertEquals(new Franc(15), five.time(3));
     }
 
 
