@@ -18,10 +18,20 @@ public class money {
     }
 
     @Test
-    @DisplayName("3장 동일성 체크")
+    @DisplayName("3장 동일성(equals) 체크")
     public void testEquality() {
         assertTrue(new Dollar(5).equals(new Dollar(5)));
         assertFalse(new Dollar(5).equals(new Dollar(6)));
+    }
+
+    @Test
+    @DisplayName("5장 $5 + 10CHF = $10(환율이 2:1일경우)")
+    public void testFrancMultiplication(){
+        Franc five = new Franc(5);
+
+        assertEquals(new Franc(10),five.time(2));
+        assertEquals(new Franc(15),five.time(3));
+
     }
 
 
