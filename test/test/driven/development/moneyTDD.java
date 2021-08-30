@@ -41,5 +41,14 @@ public class moneyTDD {
         assertFalse(Money.franc(5).equals(Money.dollar(5)));
     }
 
+    @Test
+    @DisplayName("9장 가격 통화 개념 도입")
+    public void testCurrency(){
+        assertEquals("USD", Money.dollar(1).currency());
+        assertEquals("CHF", Money.franc(1).currency());
+
+    }
+
+
 }
 

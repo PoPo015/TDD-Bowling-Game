@@ -2,22 +2,18 @@ package test.driven.development;
 
 public class Franc extends Money {
 
-//    public int amount;
-
-    public Franc(int amount){
-        this.amount = amount;
+    public Franc(int amount, String currency) {
+        super(amount, currency);
     }
 
-    public Franc time(int multiplier){
-        return new Franc(amount * multiplier);
+    public Franc time(int multiplier) {
+        return new Franc(amount * multiplier, null);
     }
 
-//    public boolean equals(Object object){
-//        Franc franc = (Franc) object;
-//        return amount == franc.amount;
-//    }
-
-
+    @Override
+    String currency() {
+        return "CHF";
+    }
 
 
 }
