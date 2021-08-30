@@ -1,3 +1,5 @@
+package bowling;
+
 public class Game {
 
     private int rolls[] = new int[21];

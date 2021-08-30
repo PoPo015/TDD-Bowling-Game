@@ -1,3 +1,5 @@
+package bowling;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -18,7 +20,7 @@ class BowlingGameTest {
     @DisplayName("0개씩 성공")
     public void canRoll() {
         rollMany(20, 0);
-        assertEquals(0, game.getscore());
+        Assertions.assertEquals(0, game.getscore());
     }
 
 
@@ -26,7 +28,7 @@ class BowlingGameTest {
     @DisplayName("1개씩만 넘김")
     public void TestAllOnes() {
         rollMany(20, 1);
-        assertEquals(20, game.getscore());
+        Assertions.assertEquals(20, game.getscore());
     }
 
     @Test
@@ -35,7 +37,7 @@ class BowlingGameTest {
         rollSpare();
         game.roll(3);
         rollMany(17,0);
-        assertEquals(16,game.getscore());
+        Assertions.assertEquals(16,game.getscore());
 
     }
     @Test
@@ -45,14 +47,14 @@ class BowlingGameTest {
         game.roll(3);
         game.roll(4);
         rollMany(16,0);
-        assertEquals(24,game.getscore());
+        Assertions.assertEquals(24,game.getscore());
     }
 
     @Test
     @DisplayName("300점 만점")
     public void testPerfectGame(){
         rollMany(12,10);
-        assertEquals(300, game.getscore());
+        Assertions.assertEquals(300, game.getscore());
     }
 
 
