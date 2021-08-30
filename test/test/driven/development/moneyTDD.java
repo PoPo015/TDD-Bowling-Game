@@ -36,5 +36,10 @@ public class moneyTDD {
         assertEquals(new Franc(15), five.time(3));
     }
 
+    @Test
+    @DisplayName("7장 Franc와 Dollar 비교")
+    public void FrancAndDollarEqulas(){
+        assertFalse(new Franc(5).equals(new Dollar(5)));
+    }
 
 }
