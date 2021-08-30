@@ -12,11 +12,9 @@ public class money {
     @Test
     public void testMultiplication() {
         Dollar five = new Dollar(5);
-        Dollar product = five.time(2);
-        assertEquals(10, product.amount);
 
-        product = five.time(3);
-        assertEquals(15, product.amount);
+        assertEquals(new Dollar(10), five.time(2));
+        assertEquals(new Dollar(15), five.time(3));
     }
 
     @Test
