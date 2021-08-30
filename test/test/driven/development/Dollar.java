@@ -9,7 +9,8 @@ public class Dollar {
     }
 
 
-    public void time(int multiplier) {
-        amount *= multiplier;
+    public Dollar time(int multiplier) {
+        return new Dollar(amount * multiplier);
     }
+
 }
